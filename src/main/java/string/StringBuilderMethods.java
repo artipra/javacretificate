@@ -1,6 +1,6 @@
 package string;
 
-public class StrignBuilderMethods {
+public class StringBuilderMethods {
 
     public static void main(String[] args) {
         // charAt, indexOf, length, substring
