@@ -1,5 +1,4 @@
 package datetimejave8;
-
 import java.time.LocalDate;
 import java.time.LocalDateTime;
 import java.time.LocalTime;
@@ -7,28 +6,35 @@ import java.time.Month;
 import java.util.Calendar;
 import java.util.Date;
 
-public class CreatingDateAndTime {
+public class CreatingDateAndTime{
 
-    public static void main(String[] args) {
+    public static void main(String [] args){
 
-        System.out.println(LocalDate.now());
-        System.out.println(LocalTime.now());
-        System.out.println(LocalDateTime.now());
+//        LocalDate localdate = new LocalDate();
+//        LocalTime localtime = new LocalTime();
+//        LocalDateTime datetime = new LocalDateTime();
+//
+//        System.out.println(localdate);
+//        System.out.println(localtime);
+//        System.out.println(datetime);
 
-        LocalDate localDate = LocalDate.of(2017, Month.JANUARY, 1);
-        LocalTime localTime = LocalTime.of(10,30);
+        LocalDate localDate1 = LocalDate.ofYearDay(2017,35);
+        LocalTime localTime1 = LocalTime.of(10,30);
+        LocalDateTime localDateTime1 = LocalDateTime.of(localDate1,localTime1);
 
-        System.out.println(localDate);
-        System.out.println(localTime);
-        System.out.println(LocalDateTime.of(localDate, localTime));
+        System.out.println(localDate1);
+        System.out.println(localTime1);
+        System.out.println(localDateTime1);
 
-        // before java 8
-        System.out.println(new Date());
-
-        Calendar calendar = Calendar.getInstance();
-        calendar.set(2015, Calendar.JANUARY, 1);
-        Date january = calendar.getTime();
+        Date date1 = new Date();
+        System.out.println(date1);
+        Calendar cal = Calendar.getInstance();
+        cal.set(2015, Calendar.JANUARY,1);
+        Date january = cal.getTime();
         System.out.println(january);
+
     }
+
+
 
 }

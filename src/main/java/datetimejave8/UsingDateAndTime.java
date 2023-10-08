@@ -13,13 +13,23 @@ public class UsingDateAndTime {
 
     public static void main(String[] args) {
         LocalDate date = LocalDate.of(2030, Month.JANUARY, 10);
-        System.out.println(date);
-        date = date.plusDays(5).plusMonths(2);
-        System.out.println(date);
+        System.out.println("1 "+date);
+        date = date.plusDays(5);//.plusMonths(2);
+        System.out.println("2 "+date);
+        date = date.plusDays(-5);//.plusMonths(2);
+        System.out.println("3 "+date);
+        date = date.minusDays(5);//.plusMonths(2);
+        System.out.println("4 "+date);
+        date = date.minusDays(-5);//.plusMonths(2);
+        System.out.println("5 "+date);
 
         LocalTime time = LocalTime.of(10,30);
         System.out.println(time);
         time = time.plusHours(2).plusMinutes(20);
+        System.out.println(time);
+        time = time.plusHours(-2).plusMinutes(-20);
+        System.out.println(time);
+        time = time.minusHours(-2).minusMinutes(-10);
         System.out.println(time);
 
         LocalDateTime localDateTime = LocalDateTime.of(date, time);
